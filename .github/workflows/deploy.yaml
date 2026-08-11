@@ -128,6 +128,11 @@ jobs:
             id-token: write
             issues: write
         steps:
+            - name: Checkout repository
+              uses: actions/checkout@v4
+              with:
+                persist-credentials: false
+                
             - name: Download built site
               uses: actions/download-artifact@v4
               with:
